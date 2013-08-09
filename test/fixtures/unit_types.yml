@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  nation_id: 
+  unit_class_id: 
+  toe_img: MyString
+
+two:
+  name: MyString
+  nation_id: 
+  unit_class_id: 
+  toe_img: MyString

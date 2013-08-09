@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  user_id: 
+  era_id: 
+  nation_id: 
+  total_xp: 1
+  map_stage: 1
+  game_data: 
+  battles_fought: 1
+  ech1_allowed: 1
+  ech2_allowed: 1
+
+two:
+  name: MyString
+  user_id: 
+  era_id: 
+  nation_id: 
+  total_xp: 1
+  map_stage: 1
+  game_data: 
+  battles_fought: 1
+  ech1_allowed: 1
+  ech2_allowed: 1
