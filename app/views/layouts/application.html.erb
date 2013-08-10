@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>BattlePuzzles</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -8,7 +8,103 @@
 </head>
 <body>
 
-<%= yield %>
+	<div class="head">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="col-lg-6">
+					<div class="media">
+						<img src="/assets/bp_logo.png" class="pull-left media-object"> 
+						<h1 style="color: #616d55;">BattlePuzzles</h1>
+						<p class="muted">easy to learn | lifetime to master</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-lg-offset-2" style="margin-top:15px;">
+					<p class="text-right muted">
+						<% if user_signed_in? %>
+							<small>Signed in as <%= current_user.email %></small> <br />
+							<%= link_to "Sign out", destroy_user_session_path, { class: "btn btn-default" }, method: :delete %>
+						<% else %>
+							<%= link_to "sign in", new_user_session_path, { class: "btn btn-default" } %> or <%= link_to "register", new_user_registration_path, { class: "btn btn-default" } %>
+						<% end %>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="navbar">
+			<ul class="nav navbar-nav">
+				<li><%= link_to 'home', root_url %></li>
+				<li><%= link_to 'manage armies', armies_path %></li>
+				<li><%= link_to 'start new game', new_army_path %></li>
+				<li><%= link_to 'users (for admin only)', root_url %></li>
+			</ul>                      
+		</div>
+	</div>	
+
+	
+	<div class='container'>
+		<%= yield %>
+
+	</div>
+
+	<div class='container'>
+		<div class='footer'>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="col-lg-2" style="width: 15%;">
+						<ul class="list-unstyled">
+							<li><li>
+						</ul>
+					</div>
+					<div class="col-lg-2" style="width: 15%;">
+						<ul class="list-unstyled">
+							<li>Games<li>
+							<li><a href="#">BattlePuzzles</a></li>
+							<li><a href="#">QuestPuzzles</a></li>
+							<li><a href="#">NavalPuzzles</a></li>
+							<li><a href="#">Mobile apps</a></li>							
+						</ul>
+					</div>
+					<div class="col-lg-2" style="width: 15%;">
+						<ul class="list-unstyled">
+							<li>Support<li>
+							<li><a href="#">Forums</a></li>
+							<li><a href="#">Billing issues</a></li>
+							<li><a href="#">Site status</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-2" style="width: 15%;">
+						<ul class="list-unstyled">
+							<li>Company<li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-2" style="width: 15%;">
+						<ul class="list-unstyled">
+							<li>Legal<li>
+							<li><a href="#">Terms of Service</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Security</a></li>
+							<li>reserved</li>							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 footer2">
+					<div class="col-lg-6">
+						<p class="muted pull-left">
+						Army Index and Footer design courtesy of <a href="#">Bootsnipp.com.</a>    
+						</p>
+					</div>
+					<div class="col-lg-6">
+						<p class="muted pull-right">&copy; 2013, Kevin Browne. All rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

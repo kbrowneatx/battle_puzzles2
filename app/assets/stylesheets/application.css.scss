@@ -1,0 +1,43 @@
+﻿ @import url(http://fonts.googleapis.com/css?family=Oswald);
+ @import url(http://fonts.googleapis.com/css?family=Homenaje);
+ @import url(http://fonts.googleapis.com/css?family=Rosario);
+ @import url(http://fonts.googleapis.com/css?family=Exo);
+
+ $sansFontFamily: Oswald, Helvetica, Arial, sans-serif;
+ $serifFontFamily: Oswald, 'Times New Roman', Times, serif;
+
+
+ @import 'twitter/bootstrap';
+ @import 'bootstrap/glyphicons';
+
+body {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+p {
+	font-family: $sansFontFamily;
+	font-weight: 400
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $sansFontFamily;
+	font-weight: 700;
+}
+
+.thumbnail {
+	margin-bottom: 10px;
+}
+
+.footer {
+  font-family: $serifFontFamily;
+  margin-top: 40px; 
+  padding-top: 8px; 
+	border-top: 1px solid #ccc;
+	background-color: darken(#fff, 3%);
+	.footer2 {
+		margin-top: 20px; 
+		padding-top: 5px; 
+		border-top: 1px solid #ccc;
+	}
+}
+
